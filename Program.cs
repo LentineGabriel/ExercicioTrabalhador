@@ -59,8 +59,7 @@ namespace ContractWorker
 
             Console.WriteLine("Name: " + worker.Name);
             Console.WriteLine("Department: " + worker.Departament.Name);
-            Console.WriteLine("Income for: " + monthAndYear + ": " + worker.Income(year, month).ToString
-                ("f2", CultureInfo.InvariantCulture));
+            Console.WriteLine($"Income for {monthAndYear}: " + worker.Income(year, month).ToString("f2", CultureInfo.InvariantCulture));
         }
     }
 }
