@@ -15,11 +15,6 @@ namespace ContractWorker.Entities
         public Departament Departament { get; set; }
         public List<Contracts> Contracts { get; set; } = new List<Contracts>(); // para que a lista não seja nula
 
-        public Worker()
-        {
-
-        }
-
         public Worker(string name, WorkerLevel level, double baseSalary, Departament departament)
         {
             Name = name;

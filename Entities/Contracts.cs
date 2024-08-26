@@ -12,11 +12,6 @@ namespace ContractWorker.Entities
         public double ValuePerHour { get; set; }
         public int Hours { get; set; }
 
-        public Contracts()
-        {
-
-        }
-
         public Contracts(DateTime date, double valuePerHour, int hours)
         {
             Date = date;

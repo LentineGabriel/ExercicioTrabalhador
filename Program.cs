@@ -19,7 +19,8 @@ namespace ContractWorker
         {
             Console.Write("Enter department's name: ");
             string deptName = Console.ReadLine();
-            
+            Departament dept = new Departament(deptName);
+
             Console.WriteLine("");
 
             Console.WriteLine("Enter worker datas");
@@ -29,8 +30,6 @@ namespace ContractWorker
             WorkerLevel wl = Enum.Parse<WorkerLevel>(Console.ReadLine());
             Console.Write("Base Salary: ");
             double baseSalary = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
-
-            Departament dept = new Departament(deptName);
             Worker worker = new Worker(name, wl, baseSalary, dept);
 
             Console.WriteLine("");
@@ -60,7 +59,8 @@ namespace ContractWorker
 
             Console.WriteLine("Name: " + worker.Name);
             Console.WriteLine("Department: " + worker.Departament.Name);
-            Console.WriteLine("Income for: " + monthAndYear + ": " + worker.Income(year, month).ToString("f2", CultureInfo.InvariantCulture));
+            Console.WriteLine("Income for: " + monthAndYear + ": " + worker.Income(year, month).ToString
+                ("f2", CultureInfo.InvariantCulture));
         }
     }
 }
